@@ -1,0 +1,283 @@
+Last login: Sat May 23 15:41:17 on console
+Prashawns-MacBook-Air:~ EuphoriaComplex$ ruby -v
+ruby 2.2.1p85 (2015-02-26 revision 49769) [x86_64-darwin14]
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rails -v
+/Users/EuphoriaComplex/.rbenv/versions/2.0.0-p481/lib/ruby/site_ruby/2.0.0/rubygems/dependency.rb:315:in `to_specs': Could not find 'railties' (>= 0) among 16 total gem(s) (Gem::LoadError)
+Checked in 'GEM_PATH=/Users/EuphoriaComplex/.rvm/gems/ruby-2.2.1:/Users/EuphoriaComplex/.rvm/gems/ruby-2.2.1@global', execute `gem env` for more information
+	from /Users/EuphoriaComplex/.rbenv/versions/2.0.0-p481/lib/ruby/site_ruby/2.0.0/rubygems/dependency.rb:324:in `to_spec'
+	from /Users/EuphoriaComplex/.rbenv/versions/2.0.0-p481/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_gem.rb:64:in `gem'
+	from /Users/EuphoriaComplex/.rbenv/versions/2.0.0-p481/bin/rails:22:in `<main>'
+Prashawns-MacBook-Air:~ EuphoriaComplex$ gem uninstall railties
+Prashawns-MacBook-Air:~ EuphoriaComplex$ gem uninstall rails
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rvm implode
+Are you SURE you wish for rvm to implode?
+This will recursively remove /Users/EuphoriaComplex/.rvm and other rvm traces?
+(anything other than 'yes' will cancel) > yes
+Removing rvm-shipped binaries (rvm-prompt, rvm, rvm-sudo rvm-shell and rvm-auto-ruby)
+Removing rvm wrappers in /Users/EuphoriaComplex/.rvm/bin
+Hai! Removing /Users/EuphoriaComplex/.rvm
+/Users/EuphoriaComplex/.rvm has been removed.
+
+Note you may need to manually remove /etc/rvmrc and ~/.rvmrc if they exist still.
+Please check all .bashrc .bash_profile .profile and .zshrc for RVM source lines and delete or comment out if this was a Per-User installation.
+Also make sure to remove `rvm` group if this was a system installation.
+Finally it might help to relogin / restart if you want to have fresh environment (like for installing RVM again).
+
+Prashawns-MacBook-Air:~ EuphoriaComplex$ gem uninstall rvm
+Prashawns-MacBook-Air:~ EuphoriaComplex$ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+It appears Homebrew is already installed. If your intent is to reinstall you
+should do the following before running this installer again:
+    rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
+Prashawns-MacBook-Air:~ EuphoriaComplex$ gem install rubygems-update
+ERROR:  Loading command: install (LoadError)
+	dlopen(/Users/EuphoriaComplex/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/x86_64-darwin12.0.0/openssl.bundle, 9): Symbol not found: _SSLv2_client_method
+  Referenced from: /Users/EuphoriaComplex/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/x86_64-darwin12.0.0/openssl.bundle
+  Expected in: /usr/local/opt/openssl/lib/libssl.1.0.0.dylib
+ in /Users/EuphoriaComplex/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/x86_64-darwin12.0.0/openssl.bundle - /Users/EuphoriaComplex/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/x86_64-darwin12.0.0/openssl.bundle
+ERROR:  While executing gem ... (NoMethodError)
+    undefined method `invoke_with_build_args' for nil:NilClass
+Prashawns-MacBook-Air:~ EuphoriaComplex$ gem update --system
+ERROR:  Loading command: update (LoadError)
+	dlopen(/Users/EuphoriaComplex/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/x86_64-darwin12.0.0/openssl.bundle, 9): Symbol not found: _SSLv2_client_method
+  Referenced from: /Users/EuphoriaComplex/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/x86_64-darwin12.0.0/openssl.bundle
+  Expected in: /usr/local/opt/openssl/lib/libssl.1.0.0.dylib
+ in /Users/EuphoriaComplex/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/x86_64-darwin12.0.0/openssl.bundle - /Users/EuphoriaComplex/.rbenv/versions/2.0.0-p481/lib/ruby/2.0.0/x86_64-darwin12.0.0/openssl.bundle
+ERROR:  While executing gem ... (NoMethodError)
+    undefined method `invoke_with_build_args' for nil:NilClass
+Prashawns-MacBook-Air:~ EuphoriaComplex$ brew install rbenv ruby-build
+Warning: rbenv-0.4.0 already installed
+Error: ruby-build-20140524 already installed
+To install this version, first `brew unlink ruby-build'
+Prashawns-MacBook-Air:~ EuphoriaComplex$ brew unlink ruby-build
+Unlinking /usr/local/Cellar/ruby-build/20140524... 4 symlinks removed
+Prashawns-MacBook-Air:~ EuphoriaComplex$ brew install rbenv ruby-build
+Warning: rbenv-0.4.0 already installed
+==> Downloading https://github.com/sstephenson/ruby-build/archive/v20150519.tar.
+######################################################################## 100.0%
+==> ./install.sh
+🍺  /usr/local/Cellar/ruby-build/20150519: 162 files, 688K, built in 2 seconds
+Prashawns-MacBook-Air:~ EuphoriaComplex$ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+Prashawns-MacBook-Air:~ EuphoriaComplex$ source ~/.bash_profile
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rbenv install 2.2.2
+Downloading ruby-2.2.2.tar.gz...
+-> http://dqw8nmjcqpjn7.cloudfront.net/5ffc0f317e429e6b29d4a98ac521c3ce65481bfd22a8cf845fa02a7b113d9b44
+Installing ruby-2.2.2...
+Installed ruby-2.2.2 to /Users/EuphoriaComplex/.rbenv/versions/2.2.2
+
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rbenv global 2.2.2
+Prashawns-MacBook-Air:~ EuphoriaComplex$ ruby -v
+ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-darwin14]
+Prashawns-MacBook-Air:~ EuphoriaComplex$ gem install rails -v 4.2.1
+Fetching: thread_safe-0.3.5.gem (100%)
+Successfully installed thread_safe-0.3.5
+Fetching: tzinfo-1.2.2.gem (100%)
+Successfully installed tzinfo-1.2.2
+Fetching: i18n-0.7.0.gem (100%)
+Successfully installed i18n-0.7.0
+Fetching: activesupport-4.2.1.gem (100%)
+Successfully installed activesupport-4.2.1
+Fetching: rails-deprecated_sanitizer-1.0.3.gem (100%)
+Successfully installed rails-deprecated_sanitizer-1.0.3
+Fetching: mini_portile-0.6.2.gem (100%)
+Successfully installed mini_portile-0.6.2
+Fetching: nokogiri-1.6.6.2.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed nokogiri-1.6.6.2
+Fetching: rails-dom-testing-1.0.6.gem (100%)
+Successfully installed rails-dom-testing-1.0.6
+Fetching: loofah-2.0.2.gem (100%)
+Successfully installed loofah-2.0.2
+Fetching: rails-html-sanitizer-1.0.2.gem (100%)
+Successfully installed rails-html-sanitizer-1.0.2
+Fetching: erubis-2.7.0.gem (100%)
+Successfully installed erubis-2.7.0
+Fetching: builder-3.2.2.gem (100%)
+Successfully installed builder-3.2.2
+Fetching: actionview-4.2.1.gem (100%)
+Successfully installed actionview-4.2.1
+Fetching: rack-1.6.1.gem (100%)
+Successfully installed rack-1.6.1
+Fetching: rack-test-0.6.3.gem (100%)
+Successfully installed rack-test-0.6.3
+Fetching: actionpack-4.2.1.gem (100%)
+Successfully installed actionpack-4.2.1
+Fetching: sprockets-3.1.0.gem (100%)
+Successfully installed sprockets-3.1.0
+Fetching: sprockets-rails-2.3.1.gem (100%)
+Successfully installed sprockets-rails-2.3.1
+Fetching: bundler-1.9.9.gem (100%)
+Successfully installed bundler-1.9.9
+Fetching: thor-0.19.1.gem (100%)
+Successfully installed thor-0.19.1
+Fetching: railties-4.2.1.gem (100%)
+Successfully installed railties-4.2.1
+Fetching: globalid-0.3.5.gem (100%)
+Successfully installed globalid-0.3.5
+Fetching: activejob-4.2.1.gem (100%)
+Successfully installed activejob-4.2.1
+Fetching: mime-types-2.5.gem (100%)
+Successfully installed mime-types-2.5
+Fetching: mail-2.6.3.gem (100%)
+Successfully installed mail-2.6.3
+Fetching: actionmailer-4.2.1.gem (100%)
+Successfully installed actionmailer-4.2.1
+Fetching: arel-6.0.0.gem (100%)
+Successfully installed arel-6.0.0
+Fetching: activemodel-4.2.1.gem (100%)
+Successfully installed activemodel-4.2.1
+Fetching: activerecord-4.2.1.gem (100%)
+Successfully installed activerecord-4.2.1
+Fetching: rails-4.2.1.gem (100%)
+Successfully installed rails-4.2.1
+Parsing documentation for thread_safe-0.3.5
+Installing ri documentation for thread_safe-0.3.5
+Parsing documentation for tzinfo-1.2.2
+Installing ri documentation for tzinfo-1.2.2
+Parsing documentation for i18n-0.7.0
+Installing ri documentation for i18n-0.7.0
+Parsing documentation for activesupport-4.2.1
+Installing ri documentation for activesupport-4.2.1
+Parsing documentation for rails-deprecated_sanitizer-1.0.3
+Installing ri documentation for rails-deprecated_sanitizer-1.0.3
+Parsing documentation for mini_portile-0.6.2
+Installing ri documentation for mini_portile-0.6.2
+Parsing documentation for nokogiri-1.6.6.2
+Installing ri documentation for nokogiri-1.6.6.2
+Parsing documentation for rails-dom-testing-1.0.6
+Installing ri documentation for rails-dom-testing-1.0.6
+Parsing documentation for loofah-2.0.2
+Installing ri documentation for loofah-2.0.2
+Parsing documentation for rails-html-sanitizer-1.0.2
+Installing ri documentation for rails-html-sanitizer-1.0.2
+Parsing documentation for erubis-2.7.0
+Installing ri documentation for erubis-2.7.0
+Parsing documentation for builder-3.2.2
+Installing ri documentation for builder-3.2.2
+Parsing documentation for actionview-4.2.1
+Installing ri documentation for actionview-4.2.1
+Parsing documentation for rack-1.6.1
+Installing ri documentation for rack-1.6.1
+Parsing documentation for rack-test-0.6.3
+Installing ri documentation for rack-test-0.6.3
+Parsing documentation for actionpack-4.2.1
+Installing ri documentation for actionpack-4.2.1
+Parsing documentation for sprockets-3.1.0
+Installing ri documentation for sprockets-3.1.0
+Parsing documentation for sprockets-rails-2.3.1
+Installing ri documentation for sprockets-rails-2.3.1
+Parsing documentation for bundler-1.9.9
+Installing ri documentation for bundler-1.9.9
+Parsing documentation for thor-0.19.1
+Installing ri documentation for thor-0.19.1
+Parsing documentation for railties-4.2.1
+Installing ri documentation for railties-4.2.1
+Parsing documentation for globalid-0.3.5
+Installing ri documentation for globalid-0.3.5
+Parsing documentation for activejob-4.2.1
+Installing ri documentation for activejob-4.2.1
+Parsing documentation for mime-types-2.5
+Installing ri documentation for mime-types-2.5
+Parsing documentation for mail-2.6.3
+Installing ri documentation for mail-2.6.3
+Parsing documentation for actionmailer-4.2.1
+Installing ri documentation for actionmailer-4.2.1
+Parsing documentation for arel-6.0.0
+Installing ri documentation for arel-6.0.0
+Parsing documentation for activemodel-4.2.1
+Installing ri documentation for activemodel-4.2.1
+Parsing documentation for activerecord-4.2.1
+Installing ri documentation for activerecord-4.2.1
+Parsing documentation for rails-4.2.1
+Installing ri documentation for rails-4.2.1
+Done installing documentation for thread_safe, tzinfo, i18n, activesupport, rails-deprecated_sanitizer, mini_portile, nokogiri, rails-dom-testing, loofah, rails-html-sanitizer, erubis, builder, actionview, rack, rack-test, actionpack, sprockets, sprockets-rails, bundler, thor, railties, globalid, activejob, mime-types, mail, actionmailer, arel, activemodel, activerecord, rails after 443 seconds
+30 gems installed
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rbenv rehash
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rails -v
+rbenv: rails: command not found
+
+The `rails' command exists in these Ruby versions:
+  2.0.0-p481
+
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rbenv rehash
+Prashawns-MacBook-Air:~ EuphoriaComplex$ gem list rails
+
+*** LOCAL GEMS ***
+
+rails (4.2.1)
+rails-deprecated_sanitizer (1.0.3)
+rails-dom-testing (1.0.6)
+rails-html-sanitizer (1.0.2)
+sprockets-rails (2.3.1)
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rbenv version
+2.2.2 (set by /Users/EuphoriaComplex/.rbenv/version)
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rbenv global 2.2.2
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rbenv rehash
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rails -v
+rbenv: rails: command not found
+
+The `rails' command exists in these Ruby versions:
+  2.0.0-p481
+
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rbenv exec rails
+rbenv: rails: command not found
+
+The `rails' command exists in these Ruby versions:
+  2.0.0-p481
+
+Prashawns-MacBook-Air:~ EuphoriaComplex$ cd /usr/bin/rails
+-bash: cd: /usr/bin/rails: Not a directory
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rbenv versions
+  system
+  2.0.0-p481
+* 2.2.2 (set by /Users/EuphoriaComplex/.rbenv/version)
+Prashawns-MacBook-Air:~ EuphoriaComplex$ ruby -v
+ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-darwin14]
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rbenv rehash
+Prashawns-MacBook-Air:~ EuphoriaComplex$ gem list rails
+
+*** LOCAL GEMS ***
+
+rails (4.2.1)
+rails-deprecated_sanitizer (1.0.3)
+rails-dom-testing (1.0.6)
+rails-html-sanitizer (1.0.2)
+sprockets-rails (2.3.1)
+Prashawns-MacBook-Air:~ EuphoriaComplex$ whereis rails
+/usr/bin/rails
+Prashawns-MacBook-Air:~ EuphoriaComplex$ whereis ruby
+/usr/bin/ruby
+Prashawns-MacBook-Air:~ EuphoriaComplex$ whereis /usr/bin
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rbenv which rails
+rbenv: rails: command not found
+
+The `rails' command exists in these Ruby versions:
+  2.0.0-p481
+
+Prashawns-MacBook-Air:~ EuphoriaComplex$ ls /usr/bin/rails
+/usr/bin/rails
+Prashawns-MacBook-Air:~ EuphoriaComplex$ ls
+Applications	Documents	Movies		Public		ssh
+Books		Downloads	Music		Samsung
+Desktop		Library		Pictures	src
+Prashawns-MacBook-Air:~ EuphoriaComplex$ sudo /usr/local/bin/gem install rails
+Password:
+sudo: /usr/local/bin/gem: command not found
+Prashawns-MacBook-Air:~ EuphoriaComplex$ which sudo
+/usr/bin/sudo
+Prashawns-MacBook-Air:~ EuphoriaComplex$ ls
+Applications	Documents	Movies		Public		ssh
+Books		Downloads	Music		Samsung
+Desktop		Library		Pictures	src
+Prashawns-MacBook-Air:~ EuphoriaComplex$ cd src
+-bash: /Users/EuphoriaComplex/.rvm/scripts/initialize: No such file or directory
+-bash: /Users/EuphoriaComplex/.rvm/scripts/hook: No such file or directory
+Prashawns-MacBook-Air:src EuphoriaComplex$ ls
+REV REST		garageio_with_auth	pants_on_fire
+REV REST 2		garageio_with_email	tutorial
+Shirts			garageio_with_forms	uco_app
+bookmarks		lottery			venture
+garageio		mad_libs		woodstockly
+Prashawns-MacBook-Air:src EuphoriaComplex$ cd venture
+-bash: /Users/EuphoriaComplex/.rvm/scripts/initialize: No such file or directory
+-bash: /Users/EuphoriaComplex/.rvm/scripts/hook: No such file or directory
+Prashawns-MacBook-Air:venture EuphoriaComplex$ 

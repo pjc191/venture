@@ -1,0 +1,420 @@
+Last login: Fri May 22 18:58:24 on console
+Prashawns-MacBook-Air:~ EuphoriaComplex$ ls
+Applications	Documents	Movies		Public		ssh
+Books		Downloads	Music		Samsung
+Desktop		Library		Pictures	src
+Prashawns-MacBook-Air:~ EuphoriaComplex$ cd src
+Prashawns-MacBook-Air:src EuphoriaComplex$ ls
+REV REST		garageio_with_auth	pants_on_fire
+REV REST 2		garageio_with_email	tutorial
+Shirts			garageio_with_forms	uco_app
+bookmarks		lottery			venture
+garageio		mad_libs		woodstockly
+Prashawns-MacBook-Air:src EuphoriaComplex$ cd venture
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git init
+Initialized empty Git repository in /Users/EuphoriaComplex/src/venture/.git/
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git remote add origin https://github.com/pjc191/venture.git
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/pjc191/venture.git'
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git show-ref
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git init
+Reinitialized existing Git repository in /Users/EuphoriaComplex/src/venture/.git/
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git remote add origin https://github.com/pjc191/venture.git
+fatal: remote origin already exists.
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git commit -m "Initial Commit"
+On branch master
+
+Initial commit
+
+nothing to commit
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git push origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/pjc191/venture.git'
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git pull --rebase
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/pjc191/venture
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to rebase against.
+See git-pull(1) for details
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git pull --rebase origin master
+From https://github.com/pjc191/venture
+ * branch            master     -> FETCH_HEAD
+Prashawns-MacBook-Air:venture EuphoriaComplex$ ls
+README.md
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rails new venture
+      create  
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/views/layouts/application.html.erb
+      create  app/assets/images/.keep
+      create  app/mailers/.keep
+      create  app/models/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  test/fixtures
+      create  test/fixtures/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/test_helper.rb
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.keep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.keep
+         run  bundle install
+
+Fetching gem metadata from https://rubygems.org/............
+Fetching additional metadata from https://rubygems.org/..
+Resolving dependencies...
+Installing rake 10.4.2
+Installing i18n 0.7.0
+Installing json 1.8.2
+Installing minitest 5.6.1
+Installing thread_safe 0.3.5
+Installing tzinfo 1.2.2
+Using activesupport 4.1.2
+Using builder 3.2.2
+Using erubis 2.7.0
+Using actionview 4.1.2
+Installing rack 1.5.3
+Installing rack-test 0.6.3
+Using actionpack 4.1.2
+Using mime-types 1.25.1
+Using polyglot 0.3.5
+Using treetop 1.4.15
+Using mail 2.5.4
+Using actionmailer 4.1.2
+Using activemodel 4.1.2
+Using arel 5.0.1.20140414130214
+Using activerecord 4.1.2
+Using bundler 1.6.3
+Installing coffee-script-source 1.9.1.1
+Installing execjs 2.5.2
+Installing coffee-script 2.4.1
+Using thor 0.19.1
+Using railties 4.1.2
+Using coffee-rails 4.0.1
+Using hike 1.2.3
+Installing multi_json 1.11.0
+Installing jbuilder 2.2.16
+Installing jquery-rails 3.1.2
+Using tilt 1.4.1
+Installing sprockets 2.12.3
+Installing sprockets-rails 2.3.1
+Using rails 4.1.2
+Installing rdoc 4.2.0
+Using sass 3.2.19
+Installing sass-rails 4.0.5
+Installing sdoc 0.4.1
+Installing spring 1.3.6
+Installing sqlite3 1.3.10
+Installing turbolinks 2.5.3
+Installing uglifier 2.7.1
+Your bundle is complete!
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+Post-install message from rdoc:
+Depending on your version of ruby, you may need to install ruby rdoc/ri data:
+
+<= 1.8.6 : unsupported
+ = 1.8.7 : gem install rdoc-data; rdoc-data --install
+ = 1.9.1 : gem install rdoc-data; rdoc-data --install
+>= 1.9.2 : nothing to do! Yay!
+         run  bundle exec spring binstub --all
+Warning: You're using Rubygems 2.0.14 with Spring. Upgrade to at least Rubygems 2.1.0 and run `gem pristine --all` for better startup performance.
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+Prashawns-MacBook-Air:venture EuphoriaComplex$ 
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git init
+Reinitialized existing Git repository in /Users/EuphoriaComplex/src/venture/.git/
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git add -A
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git commit -m "Started Rails app entitled venture"
+[master 9091ca4] Started Rails app entitled venture
+ Committer: pjc191 <EuphoriaComplex@Prashawns-MacBook-Air.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 56 files changed, 902 insertions(+)
+ create mode 100644 venture/.gitignore
+ create mode 100644 venture/Gemfile
+ create mode 100644 venture/Gemfile.lock
+ create mode 100644 venture/README.rdoc
+ create mode 100644 venture/Rakefile
+ create mode 100644 venture/app/assets/images/.keep
+ create mode 100644 venture/app/assets/javascripts/application.js
+ create mode 100644 venture/app/assets/stylesheets/application.css
+ create mode 100644 venture/app/controllers/application_controller.rb
+ create mode 100644 venture/app/controllers/concerns/.keep
+ create mode 100644 venture/app/helpers/application_helper.rb
+ create mode 100644 venture/app/mailers/.keep
+ create mode 100644 venture/app/models/.keep
+ create mode 100644 venture/app/models/concerns/.keep
+ create mode 100644 venture/app/views/layouts/application.html.erb
+ create mode 100755 venture/bin/bundle
+ create mode 100755 venture/bin/rails
+ create mode 100755 venture/bin/rake
+ create mode 100755 venture/bin/spring
+ create mode 100644 venture/config.ru
+ create mode 100644 venture/config/application.rb
+ create mode 100644 venture/config/boot.rb
+ create mode 100644 venture/config/database.yml
+ create mode 100644 venture/config/environment.rb
+ create mode 100644 venture/config/environments/development.rb
+ create mode 100644 venture/config/environments/production.rb
+ create mode 100644 venture/config/environments/test.rb
+ create mode 100644 venture/config/initializers/assets.rb
+ create mode 100644 venture/config/initializers/backtrace_silencers.rb
+ create mode 100644 venture/config/initializers/cookies_serializer.rb
+ create mode 100644 venture/config/initializers/filter_parameter_logging.rb
+ create mode 100644 venture/config/initializers/inflections.rb
+ create mode 100644 venture/config/initializers/mime_types.rb
+ create mode 100644 venture/config/initializers/session_store.rb
+ create mode 100644 venture/config/initializers/wrap_parameters.rb
+ create mode 100644 venture/config/locales/en.yml
+ create mode 100644 venture/config/routes.rb
+ create mode 100644 venture/config/secrets.yml
+ create mode 100644 venture/db/seeds.rb
+ create mode 100644 venture/lib/assets/.keep
+ create mode 100644 venture/lib/tasks/.keep
+ create mode 100644 venture/log/.keep
+ create mode 100644 venture/public/404.html
+ create mode 100644 venture/public/422.html
+ create mode 100644 venture/public/500.html
+ create mode 100644 venture/public/favicon.ico
+ create mode 100644 venture/public/robots.txt
+ create mode 100644 venture/test/controllers/.keep
+ create mode 100644 venture/test/fixtures/.keep
+ create mode 100644 venture/test/helpers/.keep
+ create mode 100644 venture/test/integration/.keep
+ create mode 100644 venture/test/mailers/.keep
+ create mode 100644 venture/test/models/.keep
+ create mode 100644 venture/test/test_helper.rb
+ create mode 100644 venture/vendor/assets/javascripts/.keep
+ create mode 100644 venture/vendor/assets/stylesheets/.keep
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git push -u origin master
+Counting objects: 65, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (53/53), done.
+Writing objects: 100% (64/64), 15.60 KiB | 0 bytes/s, done.
+Total 64 (delta 2), reused 0 (delta 0)
+To https://github.com/pjc191/venture.git
+   91dc743..9091ca4  master -> master
+Branch master set up to track remote branch master from origin.
+Prashawns-MacBook-Air:venture EuphoriaComplex$ subl .
+Prashawns-MacBook-Air:venture EuphoriaComplex$ ls
+README.md	venture
+Prashawns-MacBook-Air:venture EuphoriaComplex$ cd venture
+Prashawns-MacBook-Air:venture EuphoriaComplex$ ls
+Gemfile		Rakefile	config		lib		test
+Gemfile.lock	app		config.ru	log		tmp
+README.rdoc	bin		db		public		vendor
+Prashawns-MacBook-Air:venture EuphoriaComplex$ subl .
+Prashawns-MacBook-Air:venture EuphoriaComplex$ ls
+Gemfile		Rakefile	config		lib		test
+Gemfile.lock	app		config.ru	log		tmp
+README.rdoc	bin		db		public		vendor
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rails generate model Maker name:string password:string
+Warning: You're using Rubygems 2.0.14 with Spring. Upgrade to at least Rubygems 2.1.0 and run `gem pristine --all` for better startup performance.
+      invoke  active_record
+      create    db/migrate/20150523022440_create_makers.rb
+      create    app/models/maker.rb
+      invoke    test_unit
+      create      test/models/maker_test.rb
+      create      test/fixtures/makers.yml
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rake db:migrate
+== 20150523022440 CreateMakers: migrating =====================================
+-- create_table(:makers)
+   -> 0.0014s
+== 20150523022440 CreateMakers: migrated (0.0015s) ============================
+
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rails generate scaffold Event name:string category:string description:text maker_id:integer
+Warning: You're using Rubygems 2.0.14 with Spring. Upgrade to at least Rubygems 2.1.0 and run `gem pristine --all` for better startup performance.
+      invoke  active_record
+      create    db/migrate/20150523022921_create_events.rb
+      create    app/models/event.rb
+      invoke    test_unit
+      create      test/models/event_test.rb
+      create      test/fixtures/events.yml
+      invoke  resource_route
+       route    resources :events
+      invoke  scaffold_controller
+      create    app/controllers/events_controller.rb
+      invoke    erb
+      create      app/views/events
+      create      app/views/events/index.html.erb
+      create      app/views/events/edit.html.erb
+      create      app/views/events/show.html.erb
+      create      app/views/events/new.html.erb
+      create      app/views/events/_form.html.erb
+      invoke    test_unit
+      create      test/controllers/events_controller_test.rb
+      invoke    helper
+      create      app/helpers/events_helper.rb
+      invoke      test_unit
+      create        test/helpers/events_helper_test.rb
+      invoke    jbuilder
+      create      app/views/events/index.json.jbuilder
+      create      app/views/events/show.json.jbuilder
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/events.js.coffee
+      invoke    scss
+      create      app/assets/stylesheets/events.css.scss
+      invoke  scss
+      create    app/assets/stylesheets/scaffolds.css.scss
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rake db:migrate
+== 20150523022921 CreateEvents: migrating =====================================
+-- create_table(:events)
+   -> 0.0039s
+== 20150523022921 CreateEvents: migrated (0.0040s) ============================
+
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git add -A
+warning: The behavior of 'git add --all (or -A)' with no path argument from a
+subdirectory of the tree will change in Git 2.0 and should not be used anymore.
+To add content for the whole tree, run:
+
+  git add --all :/
+  (or git add -A :/)
+
+To restrict the command to the current directory, run:
+
+  git add --all .
+  (or git add -A .)
+
+With the current Git version, the command is restricted to the current directory.
+
+Prashawns-MacBook-Air:venture EuphoriaComplex$ cd .
+Prashawns-MacBook-Air:venture EuphoriaComplex$ ls
+Gemfile		Rakefile	config		lib		test
+Gemfile.lock	app		config.ru	log		tmp
+README.rdoc	bin		db		public		vendor
+Prashawns-MacBook-Air:venture EuphoriaComplex$ cd ..
+Prashawns-MacBook-Air:venture EuphoriaComplex$ ls
+README.md			venture
+Terminal Saved Output 5:22
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git add -A
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git commit -m "Created Maker and Event tables with minimal fields"
+[master 423d631] Created Maker and Event tables with minimal fields
+ Committer: pjc191 <EuphoriaComplex@Prashawns-MacBook-Air.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 25 files changed, 751 insertions(+)
+ create mode 100644 Terminal Saved Output 5:22
+ create mode 100644 venture/app/assets/javascripts/events.js.coffee
+ create mode 100644 venture/app/assets/stylesheets/events.css.scss
+ create mode 100644 venture/app/assets/stylesheets/scaffolds.css.scss
+ create mode 100644 venture/app/controllers/events_controller.rb
+ create mode 100644 venture/app/helpers/events_helper.rb
+ create mode 100644 venture/app/models/event.rb
+ create mode 100644 venture/app/models/maker.rb
+ create mode 100644 venture/app/views/events/_form.html.erb
+ create mode 100644 venture/app/views/events/edit.html.erb
+ create mode 100644 venture/app/views/events/index.html.erb
+ create mode 100644 venture/app/views/events/index.json.jbuilder
+ create mode 100644 venture/app/views/events/new.html.erb
+ create mode 100644 venture/app/views/events/show.html.erb
+ create mode 100644 venture/app/views/events/show.json.jbuilder
+ create mode 100644 venture/db/migrate/20150523022440_create_makers.rb
+ create mode 100644 venture/db/migrate/20150523022921_create_events.rb
+ create mode 100644 venture/db/schema.rb
+ create mode 100644 venture/test/controllers/events_controller_test.rb
+ create mode 100644 venture/test/fixtures/events.yml
+ create mode 100644 venture/test/fixtures/makers.yml
+ create mode 100644 venture/test/helpers/events_helper_test.rb
+ create mode 100644 venture/test/models/event_test.rb
+ create mode 100644 venture/test/models/maker_test.rb
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git push -u origin master
+Counting objects: 60, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (42/42), done.
+Writing objects: 100% (45/45), 10.11 KiB | 0 bytes/s, done.
+Total 45 (delta 4), reused 0 (delta 0)
+To https://github.com/pjc191/venture.git
+   9091ca4..423d631  master -> master
+Branch master set up to track remote branch master from origin.
+Prashawns-MacBook-Air:venture EuphoriaComplex$ 

@@ -1,0 +1,12 @@
+<h2>Signup</h2>
+
+<%= form_for @maker, url: '/signup' do |f| %>
+
+	Name of Establishment: <%= f.text_field :name %><br>
+
+	Password: <%= f.password_field :password %><br>
+	Password Confirmation: <%= f.password_field :password_confirmation %><br>
+
+	<%= f.submit "Signup!" %>
+
+<% end %>

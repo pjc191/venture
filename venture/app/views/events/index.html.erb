@@ -1,6 +1,8 @@
 <h1>Listing events</h1>
 
-<table>
+<%= link_to 'New Event', "/events/new", class: 'btn btn-primary' %>
+
+<table class='table'>
   <thead>
     <tr>
       <th>Name</th>
@@ -18,9 +20,10 @@
         <td><%= event.category %></td>
         <td><%= event.description %></td>
         <td><%= event.maker_id %></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= event.maker.name %></td>
+        <td><%= link_to 'Show', "/events/#{event.id}", class: "btn btn-primary" %></td>
+        <td><%= link_to 'Edit', "/events/#{event.id}/edit" class: "btn btn-success" %></td>
+        <!--<td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +31,4 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<!--<%= link_to 'New Event', "/events/#{event.id}/new" %>-->

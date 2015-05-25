@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
+  before_filter :authorize
+
   # GET /events
   # GET /events.json
   def index
@@ -10,6 +12,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @event = Event.find_by_id(params[:id])
   end
 
   # GET /events/new
@@ -19,6 +22,7 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
+    @car = Event.find_by_id(params[:id])
   end
 
   # POST /events
@@ -40,6 +44,8 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1
   # PATCH/PUT /events/1.json
   def update
+    @car = Event.find_by_id(params[:id])
+
     respond_to do |format|
       if @event.update(event_params)
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }
@@ -53,13 +59,13 @@ class EventsController < ApplicationController
 
   # DELETE /events/1
   # DELETE /events/1.json
-  def destroy
-    @event.destroy
-    respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  #def destroy
+   # @event.destroy
+    #respond_to do |format|
+     # format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      #format.json { head :no_content }
+    #end
+  #end
 
   private
     # Use callbacks to share common setup or constraints between actions.

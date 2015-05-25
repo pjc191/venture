@@ -1,0 +1,389 @@
+Last login: Sat May 23 18:30:35 on ttys000
+Prashawns-MacBook-Air:~ EuphoriaComplex$ ls
+Applications	Documents	Movies		Public		ssh
+Books		Downloads	Music		Samsung
+Desktop		Library		Pictures	src
+Prashawns-MacBook-Air:~ EuphoriaComplex$ cd src
+Prashawns-MacBook-Air:src EuphoriaComplex$ ruby -v
+ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-darwin14]
+Prashawns-MacBook-Air:src EuphoriaComplex$ rails -v
+rbenv: rails: command not found
+
+The `rails' command exists in these Ruby versions:
+  2.0.0-p481
+
+Prashawns-MacBook-Air:src EuphoriaComplex$ sudo /usr/local/bin/gem install rails
+Password:
+sudo: /usr/local/bin/gem: command not found
+Prashawns-MacBook-Air:src EuphoriaComplex$ rm ~/.rbenv/plugins/bundler
+rm: /Users/EuphoriaComplex/.rbenv/plugins/bundler: No such file or directory
+Prashawns-MacBook-Air:src EuphoriaComplex$ rm ~/.rbenv/shims
+rm: /Users/EuphoriaComplex/.rbenv/shims: is a directory
+Prashawns-MacBook-Air:src EuphoriaComplex$ cd ..
+Prashawns-MacBook-Air:~ EuphoriaComplex$ ls
+Applications	Documents	Movies		Public		ssh
+Books		Downloads	Music		Samsung
+Desktop		Library		Pictures	src
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rm ~/.rbenv/plugins/bundler
+rm: /Users/EuphoriaComplex/.rbenv/plugins/bundler: No such file or directory
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rm ~/.rbenv/shims
+rm: /Users/EuphoriaComplex/.rbenv/shims: is a directory
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rbenv rehash
+Prashawns-MacBook-Air:~ EuphoriaComplex$ rails -v
+rbenv: rails: command not found
+
+The `rails' command exists in these Ruby versions:
+  2.0.0-p481
+
+Prashawns-MacBook-Air:~ EuphoriaComplex$ cd
+Prashawns-MacBook-Air:~ EuphoriaComplex$ ls
+Applications	Documents	Movies		Public		ssh
+Books		Downloads	Music		Samsung
+Desktop		Library		Pictures	src
+Prashawns-MacBook-Air:~ EuphoriaComplex$ cd src
+Prashawns-MacBook-Air:src EuphoriaComplex$ ls
+REV REST		garageio_with_auth	pants_on_fire
+REV REST 2		garageio_with_email	tutorial
+Shirts			garageio_with_forms	uco_app
+bookmarks		lottery			venture
+garageio		mad_libs		woodstockly
+Prashawns-MacBook-Air:src EuphoriaComplex$ cd uco_app
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ ls
+Gemfile		Rakefile	config		lib		test
+Gemfile.lock	app		config.ru	log		tmp
+README.rdoc	bin		db		public		vendor
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ rails server
+rbenv: rails: command not found
+
+The `rails' command exists in these Ruby versions:
+  2.0.0-p481
+
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ rbenv versions
+  system
+  2.0.0-p481
+* 2.2.2 (set by /Users/EuphoriaComplex/.rbenv/version)
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ ruby -v
+ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-darwin14]
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ gem install bundler
+Fetching: bundler-1.9.9.gem (100%)
+Successfully installed bundler-1.9.9
+Parsing documentation for bundler-1.9.9
+Installing ri documentation for bundler-1.9.9
+Done installing documentation for bundler after 5 seconds
+1 gem installed
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ bundle install
+Your Gemfile lists the gem httparty (>= 0) more than once.
+You should probably keep only one of them.
+While it's not a problem now, it could cause errors if you change the version of just one of them later.
+Fetching gem metadata from https://rubygems.org/............
+Fetching version metadata from https://rubygems.org/...
+Fetching dependency metadata from https://rubygems.org/..
+Installing rake 10.3.2
+Installing i18n 0.6.11
+Using json 1.8.1
+Installing minitest 5.4.0
+Installing thread_safe 0.3.4
+Installing tzinfo 1.2.1
+Installing activesupport 4.1.1
+Installing builder 3.2.2
+Installing erubis 2.7.0
+Installing actionview 4.1.1
+Installing rack 1.5.2
+Installing rack-test 0.6.2
+Installing actionpack 4.1.1
+Installing mime-types 1.25.1
+Installing polyglot 0.3.5
+Installing treetop 1.4.15
+Installing mail 2.5.4
+Installing actionmailer 4.1.1
+Installing activemodel 4.1.1
+Installing arel 5.0.1.20140414130214
+Installing activerecord 4.1.1
+Installing ancestry 2.1.0
+Installing bcrypt 3.1.7
+Installing coffee-script-source 1.7.1
+Installing execjs 2.2.1
+Installing coffee-script 2.3.0
+Installing thor 0.19.1
+Installing railties 4.1.1
+Installing coffee-rails 4.0.1
+Installing hike 1.2.3
+Installing multi_xml 0.5.5
+Installing httparty 0.13.1
+Installing multi_json 1.10.1
+Installing jbuilder 2.1.3
+Installing jquery-rails 3.1.1
+Using bundler 1.9.9
+Installing tilt 1.4.1
+Installing sprockets 2.11.0
+Installing sprockets-rails 2.1.3
+Installing rails 4.1.1
+Installing rdoc 4.1.1
+Installing rovi 0.0.1
+Installing sass 3.2.19
+Installing sass-rails 4.0.3
+Installing sdoc 0.4.0
+Installing spring 1.1.3
+Installing sqlite3 1.3.9
+Installing turbolinks 2.2.2
+Installing uglifier 2.5.3
+Bundle complete! 15 Gemfile dependencies, 49 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+Post-install message from httparty:
+When you HTTParty, you must party hard!
+Post-install message from rdoc:
+Depending on your version of ruby, you may need to install ruby rdoc/ri data:
+
+<= 1.8.6 : unsupported
+ = 1.8.7 : gem install rdoc-data; rdoc-data --install
+ = 1.9.1 : gem install rdoc-data; rdoc-data --install
+>= 1.9.2 : nothing to do! Yay!
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ ruby-v
+-bash: ruby-v: command not found
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ ruby -v
+ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-darwin14]
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ bundle show rails
+/Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/rails-4.1.1
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ rails -v
+Rails 4.1.1
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ bundle exec rails server
+/Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.1.1/lib/active_support/values/time_zone.rb:285: warning: circular argument reference - now
+=> Booting WEBrick
+=> Rails 4.1.1 application starting in development on http://0.0.0.0:3000
+=> Run `rails server -h` for more startup options
+=> Notice: server is listening on all interfaces (0.0.0.0). Consider using 127.0.0.1 (--binding option)
+=> Ctrl-C to shutdown server
+[2015-05-23 18:46:34] INFO  WEBrick 1.3.1
+[2015-05-23 18:46:34] INFO  ruby 2.2.2 (2015-04-13) [x86_64-darwin14]
+[2015-05-23 18:46:34] INFO  WEBrick::HTTPServer#start: pid=53432 port=3000
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-23 18:46:46 -0400
+  ActiveRecord::SchemaMigration Load (0.4ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UcoController#home as HTML
+  Rendered uco/home.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 407ms (Views: 396.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-23 18:46:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-23 18:46:47 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-23 18:46:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-23 18:46:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-23 18:46:47 -0400
+^C[2015-05-23 18:46:53] INFO  going to shutdown ...
+[2015-05-23 18:46:54] INFO  WEBrick::HTTPServer#start done.
+Exiting
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ rails server
+/Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/activesupport-4.1.1/lib/active_support/values/time_zone.rb:285: warning: circular argument reference - now
+=> Booting WEBrick
+=> Rails 4.1.1 application starting in development on http://0.0.0.0:3000
+=> Run `rails server -h` for more startup options
+=> Notice: server is listening on all interfaces (0.0.0.0). Consider using 127.0.0.1 (--binding option)
+=> Ctrl-C to shutdown server
+[2015-05-23 18:47:06] INFO  WEBrick 1.3.1
+[2015-05-23 18:47:06] INFO  ruby 2.2.2 (2015-04-13) [x86_64-darwin14]
+[2015-05-23 18:47:06] INFO  WEBrick::HTTPServer#start: pid=53461 port=3000
+
+
+Started GET "/" for 127.0.0.1 at 2015-05-23 18:47:09 -0400
+  ActiveRecord::SchemaMigration Load (0.1ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UcoController#home as HTML
+  Rendered uco/home.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 30.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-05-23 18:47:10 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-05-23 18:47:10 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-05-23 18:47:10 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-05-23 18:47:10 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-05-23 18:47:10 -0400
+^C[2015-05-23 18:47:13] INFO  going to shutdown ...
+[2015-05-23 18:47:13] INFO  WEBrick::HTTPServer#start done.
+Exiting
+Prashawns-MacBook-Air:uco_app EuphoriaComplex$ cd ..
+Prashawns-MacBook-Air:src EuphoriaComplex$ ls
+REV REST		garageio_with_auth	pants_on_fire
+REV REST 2		garageio_with_email	tutorial
+Shirts			garageio_with_forms	uco_app
+bookmarks		lottery			venture
+garageio		mad_libs		woodstockly
+Prashawns-MacBook-Air:src EuphoriaComplex$ cd venture
+Prashawns-MacBook-Air:venture EuphoriaComplex$ cd venture
+Prashawns-MacBook-Air:venture EuphoriaComplex$ ls
+Gemfile		Rakefile	config		lib		test
+Gemfile.lock	app		config.ru	log		tmp
+README.rdoc	bin		db		public		vendor
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rails server
+Could not find gem 'rails (~> 4.2.1) ruby' in any of the gem sources listed in your Gemfile or installed on this machine.
+Run `bundle install` to install missing gems.
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rbenv rehash
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rails server
+Could not find gem 'rails (~> 4.2.1) ruby' in any of the gem sources listed in your Gemfile or installed on this machine.
+Run `bundle install` to install missing gems.
+Prashawns-MacBook-Air:venture EuphoriaComplex$ bundle install
+Fetching gem metadata from https://rubygems.org/............
+Fetching version metadata from https://rubygems.org/...
+Fetching dependency metadata from https://rubygems.org/..
+Resolving dependencies...
+Bundler could not find compatible versions for gem "activesupport":
+  In snapshot (Gemfile.lock):
+    activesupport (= 4.1.2)
+
+  In Gemfile:
+    rails (~> 4.2.1) ruby depends on
+      activesupport (= 4.2.1) ruby
+
+Running `bundle update` will rebuild your snapshot from scratch, using only
+the gems in your Gemfile, which may resolve the conflict.
+Prashawns-MacBook-Air:venture EuphoriaComplex$ bundle update
+Fetching gem metadata from https://rubygems.org/............
+Fetching version metadata from https://rubygems.org/...
+Fetching dependency metadata from https://rubygems.org/..
+Resolving dependencies...
+Using rake 10.4.2
+Installing i18n 0.7.0
+Installing json 1.8.2
+Installing minitest 5.6.1
+Installing thread_safe 0.3.5
+Installing tzinfo 1.2.2
+Installing activesupport 4.2.1 (was 4.1.2)
+Using builder 3.2.2
+Using erubis 2.7.0
+Installing mini_portile 0.6.2
+Installing nokogiri 1.6.6.2
+Installing rails-deprecated_sanitizer 1.0.3
+Installing rails-dom-testing 1.0.6
+Installing loofah 2.0.2
+Installing rails-html-sanitizer 1.0.2
+Installing actionview 4.2.1 (was 4.1.2)
+Installing rack 1.6.1 (was 1.5.3)
+Installing rack-test 0.6.3
+Installing actionpack 4.2.1 (was 4.1.2)
+Installing globalid 0.3.5
+Installing activejob 4.2.1
+Installing mime-types 2.5 (was 1.25.1)
+Installing mail 2.6.3 (was 2.5.4)
+Installing actionmailer 4.2.1 (was 4.1.2)
+Installing activemodel 4.2.1 (was 4.1.2)
+Installing arel 6.0.0 (was 5.0.1.20140414130214)
+Installing activerecord 4.2.1 (was 4.1.2)
+Installing debug_inspector 0.0.2
+Installing binding_of_caller 0.7.2
+Using bundler 1.9.9
+Installing coffee-script-source 1.9.1.1
+Installing execjs 2.5.2
+Installing coffee-script 2.4.1
+Using thor 0.19.1
+Installing railties 4.2.1 (was 4.1.2)
+Using coffee-rails 4.0.1
+Using hike 1.2.3
+Installing multi_json 1.11.0
+Installing jbuilder 2.2.16
+Installing jquery-rails 4.0.3 (was 3.1.2)
+Using tilt 1.4.1
+Installing sprockets 2.12.3
+Installing sprockets-rails 2.3.1
+Installing rails 4.2.1 (was 4.1.2)
+Using rdoc 4.2.0
+Using sass 3.2.19
+Installing sass-rails 4.0.5
+Installing sdoc 0.4.1
+Installing spring 1.3.6
+Installing sqlite3 1.3.10
+Installing turbolinks 2.5.3
+Installing uglifier 2.7.1
+Installing web-console 2.1.2
+Bundle updated!
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rbenv rehash
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rails -v
+Rails 4.2.1
+Prashawns-MacBook-Air:venture EuphoriaComplex$ ruby -v
+ruby 2.2.2p95 (2015-04-13 revision 50295) [x86_64-darwin14]
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rails s
+=> Booting WEBrick
+=> Rails 4.2.1 application starting in development on http://localhost:3000
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server
+[2015-05-23 18:57:39] INFO  WEBrick 1.3.1
+[2015-05-23 18:57:39] INFO  ruby 2.2.2 (2015-04-13) [x86_64-darwin14]
+[2015-05-23 18:57:39] INFO  WEBrick::HTTPServer#start: pid=74795 port=3000
+
+
+Started GET "/" for ::1 at 2015-05-23 18:57:42 -0400
+  ActiveRecord::SchemaMigration Load (0.4ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.1) lib/active_record/migration.rb:393:in `check_pending!'
+  activerecord (4.2.1) lib/active_record/migration.rb:374:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:776:in `_run_call_callbacks'
+  activesupport (4.2.1) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.2) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.1) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.1) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.1) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.1) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.1) lib/rails/engine.rb:518:in `call'
+  railties (4.2.1) lib/rails/application.rb:164:in `call'
+  rack (1.6.1) lib/rack/lock.rb:17:in `call'
+  rack (1.6.1) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.1) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.2ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (82.9ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (186.6ms)
+^C[2015-05-23 18:58:14] INFO  going to shutdown ...
+[2015-05-23 18:58:14] INFO  WEBrick::HTTPServer#start done.
+Exiting
+Prashawns-MacBook-Air:venture EuphoriaComplex$ 

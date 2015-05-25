@@ -4,6 +4,6 @@ class AddForeignKeyMakerId < ActiveRecord::Migration
   end
 
   def down
-  	remove :events, :maker_id
+  	remove_column :events, :maker_id
   end
 end
