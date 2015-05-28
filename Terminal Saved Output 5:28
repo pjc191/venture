@@ -1,0 +1,214 @@
+Last login: Thu May 28 11:17:18 on ttys000
+Prashawns-Air:~ EuphoriaComplex$ ls
+Applications	Documents	Movies		Public		ssh
+Books		Downloads	Music		Samsung
+Desktop		Library		Pictures	src
+Prashawns-Air:~ EuphoriaComplex$ cd src
+Prashawns-Air:src EuphoriaComplex$ ls
+REV REST		garageio_with_auth	pants_on_fire
+REV REST 2		garageio_with_email	tutorial
+Shirts			garageio_with_forms	uco_app
+bookmarks		lottery			venture
+garageio		mad_libs		woodstockly
+Prashawns-Air:src EuphoriaComplex$ cd uco_app
+Prashawns-Air:uco_app EuphoriaComplex$ ls
+Gemfile		Rakefile	config		lib		test
+Gemfile.lock	app		config.ru	log		tmp
+README.rdoc	bin		db		public		vendor
+Prashawns-Air:uco_app EuphoriaComplex$ cd ..
+Prashawns-Air:src EuphoriaComplex$ ls
+REV REST		garageio_with_auth	pants_on_fire
+REV REST 2		garageio_with_email	tutorial
+Shirts			garageio_with_forms	uco_app
+bookmarks		lottery			venture
+garageio		mad_libs		woodstockly
+Prashawns-Air:src EuphoriaComplex$ cd venture
+Prashawns-Air:venture EuphoriaComplex$ ls
+README.md
+Terminal Saved Output 5:22
+Terminal Saved Output 5:22 2
+Terminal Saved Output 5:23 rails four point two one
+Terminal Saved Output 5:23 second fail
+Terminal Saved Output 5:23 upgrade rails 4.2 fail
+venture
+Prashawns-Air:venture EuphoriaComplex$ cd venture
+Prashawns-Air:venture EuphoriaComplex$ ls
+Gemfile		Rakefile	config		lib		test
+Gemfile.lock	app		config.ru	log		tmp
+README.rdoc	bin		db		public		vendor
+Prashawns-Air:venture EuphoriaComplex$ git init
+Initialized empty Git repository in /Users/EuphoriaComplex/src/venture/venture/.git/
+Prashawns-Air:venture EuphoriaComplex$ cd ..
+Prashawns-Air:venture EuphoriaComplex$ git init
+Reinitialized existing Git repository in /Users/EuphoriaComplex/src/venture/.git/
+Prashawns-Air:venture EuphoriaComplex$ git add -A
+Prashawns-Air:venture EuphoriaComplex$ git commit -m "5/28 before I add Category and Location tables"
+[nuke_db a943ed4] 5/28 before I add Category and Location tables
+ Committer: pjc191 <EuphoriaComplex@prashawns-air.gateway.2wire.net>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 8 files changed, 19 insertions(+), 13 deletions(-)
+ create mode 100644 venture/db/migrate/20150525010758_add_password_digest_to_makers.rb
+Prashawns-Air:venture EuphoriaComplex$ rails generate model category type:string
+Usage:
+  rails new APP_PATH [options]
+
+Options:
+  -r, [--ruby=PATH]                                      # Path to the Ruby binary of your choice
+                                                         # Default: /Users/EuphoriaComplex/.rbenv/versions/2.2.2/bin/ruby
+  -m, [--template=TEMPLATE]                              # Path to some application template (can be a filesystem path or URL)
+      [--skip-gemfile], [--no-skip-gemfile]              # Don't create a Gemfile
+  -B, [--skip-bundle], [--no-skip-bundle]                # Don't run bundle install
+  -G, [--skip-git], [--no-skip-git]                      # Skip .gitignore file
+      [--skip-keeps], [--no-skip-keeps]                  # Skip source control .keep files
+  -O, [--skip-active-record], [--no-skip-active-record]  # Skip Active Record files
+  -S, [--skip-sprockets], [--no-skip-sprockets]          # Skip Sprockets files
+      [--skip-spring], [--no-skip-spring]                # Don't install Spring application preloader
+  -d, [--database=DATABASE]                              # Preconfigure for selected database (options: mysql/oracle/postgresql/sqlite3/frontbase/ibm_db/sqlserver/jdbcmysql/jdbcsqlite3/jdbcpostgresql/jdbc)
+                                                         # Default: sqlite3
+  -j, [--javascript=JAVASCRIPT]                          # Preconfigure for selected JavaScript library
+                                                         # Default: jquery
+  -J, [--skip-javascript], [--no-skip-javascript]        # Skip JavaScript files
+      [--dev], [--no-dev]                                # Setup the application with Gemfile pointing to your Rails checkout
+      [--edge], [--no-edge]                              # Setup the application with Gemfile pointing to Rails repository
+      [--skip-turbolinks], [--no-skip-turbolinks]        # Skip turbolinks gem
+  -T, [--skip-test-unit], [--no-skip-test-unit]          # Skip Test::Unit files
+      [--rc=RC]                                          # Path to file containing extra configuration options for rails command
+      [--no-rc], [--no-no-rc]                            # Skip loading of extra configuration options from .railsrc file
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+
+Rails options:
+  -h, [--help], [--no-help]        # Show this help message and quit
+  -v, [--version], [--no-version]  # Show Rails version number and quit
+
+Description:
+    The 'rails new' command creates a new Rails application with a default
+    directory structure and configuration at the path you specify.
+
+    You can specify extra command-line arguments to be used every time
+    'rails new' runs in the .railsrc configuration file in your home directory.
+
+    Note that the arguments specified in the .railsrc file don't affect the
+    defaults values shown above in this help message.
+
+Example:
+    rails new ~/Code/Ruby/weblog
+
+    This generates a skeletal Rails installation in ~/Code/Ruby/weblog.
+    See the README in the newly created application to get going.
+Prashawns-Air:venture EuphoriaComplex$ ls
+README.md
+Terminal Saved Output 5:22
+Terminal Saved Output 5:22 2
+Terminal Saved Output 5:23 rails four point two one
+Terminal Saved Output 5:23 second fail
+Terminal Saved Output 5:23 upgrade rails 4.2 fail
+venture
+Prashawns-Air:venture EuphoriaComplex$ cd venture
+Prashawns-Air:venture EuphoriaComplex$ ls
+Gemfile		Rakefile	config		lib		test
+Gemfile.lock	app		config.ru	log		tmp
+README.rdoc	bin		db		public		vendor
+Prashawns-Air:venture EuphoriaComplex$ rails generate model category type:string
+      invoke  active_record
+      create    db/migrate/20150528162139_create_categories.rb
+      create    app/models/category.rb
+      invoke    test_unit
+      create      test/models/category_test.rb
+      create      test/fixtures/categories.yml
+Prashawns-Air:venture EuphoriaComplex$ rails g migration rename_category_column_in_events
+      invoke  active_record
+      create    db/migrate/20150528162621_rename_category_column_in_events.rb
+Prashawns-Air:venture EuphoriaComplex$ rake:db migrate
+-bash: rake:db: command not found
+Prashawns-Air:venture EuphoriaComplex$ rake db:migrate
+== 20150528162139 CreateCategories: migrating =================================
+-- create_table(:categories)
+   -> 0.0013s
+== 20150528162139 CreateCategories: migrated (0.0014s) ========================
+
+== 20150528162621 RenameCategoryColumnInEvents: migrating =====================
+-- rename_column(:events, :category, :category_id)
+   -> 0.0052s
+== 20150528162621 RenameCategoryColumnInEvents: migrated (0.0053s) ============
+
+Prashawns-Air:venture EuphoriaComplex$ rails g migration add_foreign_key_category_id_to_events
+      invoke  active_record
+      create    db/migrate/20150528163356_add_foreign_key_category_id_to_events.rb
+Prashawns-Air:venture EuphoriaComplex$ rake db:migrate
+== 20150528163356 AddForeignKeyCategoryIdToEvents: migrating ==================
+-- add_foreign_key(:events, :categories)
+   -> 0.0001s
+== 20150528163356 AddForeignKeyCategoryIdToEvents: migrated (0.0002s) =========
+
+Prashawns-Air:venture EuphoriaComplex$ rails g model location area:string
+      invoke  active_record
+      create    db/migrate/20150528163745_create_locations.rb
+      create    app/models/location.rb
+      invoke    test_unit
+      create      test/models/location_test.rb
+      create      test/fixtures/locations.yml
+Prashawns-Air:venture EuphoriaComplex$ rails g migration add_location_column_to_events
+      invoke  active_record
+      create    db/migrate/20150528163849_add_location_column_to_events.rb
+Prashawns-Air:venture EuphoriaComplex$ rake db:migrate
+== 20150528163745 CreateLocations: migrating ==================================
+-- create_table(:locations)
+   -> 0.0014s
+== 20150528163745 CreateLocations: migrated (0.0014s) =========================
+
+== 20150528163849 AddLocationColumnToEvents: migrating ========================
+-- add_column(:events, :location_id, :string)
+   -> 0.0011s
+== 20150528163849 AddLocationColumnToEvents: migrated (0.0012s) ===============
+
+Prashawns-Air:venture EuphoriaComplex$ rails g migration add_foreign_key_location_id_to_events
+      invoke  active_record
+      create    db/migrate/20150528164256_add_foreign_key_location_id_to_events.rb
+Prashawns-Air:venture EuphoriaComplex$ rake db:migrate
+== 20150528164256 AddForeignKeyLocationIdToEvents: migrating ==================
+-- add_foreign_key(:events, :locations)
+   -> 0.0000s
+== 20150528164256 AddForeignKeyLocationIdToEvents: migrated (0.0002s) =========
+
+Prashawns-Air:venture EuphoriaComplex$ rake db:seed
+rake aborted!
+ActiveRecord::SubclassNotFound: Invalid single-table inheritance type: Food/Drink is not a subclass of Category
+/Users/EuphoriaComplex/src/venture/venture/db/seeds.rb:9:in `<top (required)>'
+Tasks: TOP => db:seed
+(See full trace by running task with --trace)
+Prashawns-Air:venture EuphoriaComplex$ rake db:seed
+/Users/EuphoriaComplex/src/venture/venture/db/seeds.rb:9: warning: duplicated key at line 9 ignored: :type
+/Users/EuphoriaComplex/src/venture/venture/db/seeds.rb:9: warning: duplicated key at line 9 ignored: :type
+/Users/EuphoriaComplex/src/venture/venture/db/seeds.rb:9: warning: duplicated key at line 9 ignored: :type
+/Users/EuphoriaComplex/src/venture/venture/db/seeds.rb:9: warning: duplicated key at line 9 ignored: :type
+rake aborted!
+ActiveRecord::SubclassNotFound: Invalid single-table inheritance type: Collegiate is not a subclass of Category
+/Users/EuphoriaComplex/src/venture/venture/db/seeds.rb:9:in `<top (required)>'
+Tasks: TOP => db:seed
+(See full trace by running task with --trace)
+Prashawns-Air:venture EuphoriaComplex$ rake db:seed
+/Users/EuphoriaComplex/src/venture/venture/db/seeds.rb:9: warning: duplicated key at line 9 ignored: :type
+/Users/EuphoriaComplex/src/venture/venture/db/seeds.rb:9: warning: duplicated key at line 9 ignored: :type
+/Users/EuphoriaComplex/src/venture/venture/db/seeds.rb:9: warning: duplicated key at line 9 ignored: :type
+/Users/EuphoriaComplex/src/venture/venture/db/seeds.rb:9: warning: duplicated key at line 9 ignored: :type
+rake aborted!
+ActiveRecord::SubclassNotFound: Invalid single-table inheritance type: Collegiate is not a subclass of Category
+/Users/EuphoriaComplex/src/venture/venture/db/seeds.rb:9:in `<top (required)>'
+Tasks: TOP => db:seed
+(See full trace by running task with --trace)
+Prashawns-Air:venture EuphoriaComplex$ 
