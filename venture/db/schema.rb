@@ -11,21 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523155503) do
+ActiveRecord::Schema.define(version: 20150525010758) do
 
   create_table "events", force: :cascade do |t|
-    t.string   "name",        limit: 255
-    t.string   "category",    limit: 255
+    t.string   "name"
+    t.string   "category"
     t.text     "description"
+    t.string   "maker_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "makers", force: :cascade do |t|
-    t.string   "name",       limit: 255
-    t.string   "password",   limit: 255
+    t.string   "name"
+    t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end

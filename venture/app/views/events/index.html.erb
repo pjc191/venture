@@ -22,7 +22,6 @@
         <td><%= event.maker_id %></td>
         <td><%= event.maker.name %></td>
         <td><%= link_to 'Show', "/events/#{event.id}", class: "btn btn-primary" %></td>
-        <td><%= link_to 'Edit', "/events/#{event.id}/edit" class: "btn btn-success" %></td>
         <!--<td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
@@ -31,4 +30,3 @@
 
 <br>
 
-<!--<%= link_to 'New Event', "/events/#{event.id}/new" %>-->

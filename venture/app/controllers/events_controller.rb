@@ -18,6 +18,8 @@ class EventsController < ApplicationController
   # GET /events/new
   def new
     @event = Event.new
+
+    #@category = Category.new(1 => "Food/Drink")
   end
 
   # GET /events/1/edit
