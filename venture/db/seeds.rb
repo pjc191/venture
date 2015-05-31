@@ -6,6 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Category.new(type: 'Food/Drink', type: 'Entertainment', type: 'Organization', type: 'Business', type: 'Collegiate')
+Category.create(kind: 'Food/Drink') 
+Category.create(kind: 'Entertainment') 
+Category.create(kind: 'Organization')
+Category.create(kind: 'Business')
+Category.create(kind: 'Collegiate')
 
-#location_areas = Location.create([{area: 'Downtown NB'}, {area: 'College Ave'}, {area: 'Cook/Douglass'}, {area: 'Livingston'}, {area: 'Busch'}, {area: 'Surrounding NB'}, {area: 'Out of Town'}])
+Location.create(area: 'Downtown NB') 
+Location.create(area: 'College Ave', 
+Location.create(area: 'Cook/Douglass') 
+Location.create(area: 'Livingston') 
+Location.create(area: 'Busch') 
+Location.create(area: 'Surrounding NB')
+Location.create(area: 'Out of Town')
