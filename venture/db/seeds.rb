@@ -13,7 +13,7 @@ Category.create(kind: 'Business')
 Category.create(kind: 'Collegiate')
 
 Location.create(area: 'Downtown NB') 
-Location.create(area: 'College Ave', 
+Location.create(area: 'College Ave') 
 Location.create(area: 'Cook/Douglass') 
 Location.create(area: 'Livingston') 
 Location.create(area: 'Busch') 

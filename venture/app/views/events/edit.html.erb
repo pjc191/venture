@@ -11,7 +11,12 @@
 
   <div class='form-group'>
     <%= form.label :category %>
-    <%= form.text_field :category %>
+    <%= form.select "category_id", options_from_collection_for_select(Category.all, "id", "kind") %>
+  </div>
+
+  <div class='form-group'>
+    <%= form.label :location %>
+    <%= form.select "location_id", options_from_collection_for_select(Location.all, "id", "area") %>
   </div>
 
   <div class='form-group'>
