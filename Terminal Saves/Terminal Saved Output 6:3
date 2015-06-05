@@ -1,0 +1,882 @@
+Last login: Wed Jun  3 17:54:31 on ttys000
+Prashawns-MacBook-Air:~ EuphoriaComplex$ ls
+Applications	Documents	Movies		Public		ssh
+Books		Downloads	Music		Samsung
+Desktop		Library		Pictures	src
+Prashawns-MacBook-Air:~ EuphoriaComplex$ cd src
+Prashawns-MacBook-Air:src EuphoriaComplex$ ls
+REV REST		garageio_with_auth	pants_on_fire
+REV REST 2		garageio_with_email	tutorial
+Shirts			garageio_with_forms	uco_app
+bookmarks		lottery			venture
+garageio		mad_libs		woodstockly
+Prashawns-MacBook-Air:src EuphoriaComplex$ cd venture
+Prashawns-MacBook-Air:venture EuphoriaComplex$ ls
+README.md
+Terminal Saved Output 5:22
+Terminal Saved Output 5:22 2
+Terminal Saved Output 5:23 rails four point two one
+Terminal Saved Output 5:23 second fail
+Terminal Saved Output 5:23 upgrade rails 4.2 fail
+Terminal Saved Output 5:28
+venture
+Prashawns-MacBook-Air:venture EuphoriaComplex$ cd venture
+Prashawns-MacBook-Air:venture EuphoriaComplex$ ls
+Gemfile		Rakefile	config		lib		test
+Gemfile.lock	app		config.ru	log		tmp
+README.rdoc	bin		db		public		vendor
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rails s
+=> Booting WEBrick
+=> Rails 4.2.1 application starting in development on http://localhost:3000
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server
+[2015-06-03 22:21:46] INFO  WEBrick 1.3.1
+[2015-06-03 22:21:46] INFO  ruby 2.2.2 (2015-04-13) [x86_64-darwin14]
+[2015-06-03 22:21:46] INFO  WEBrick::HTTPServer#start: pid=2065 port=3000
+
+
+Started GET "/" for ::1 at 2015-06-03 22:21:50 -0400
+  ActiveRecord::SchemaMigration Load (0.2ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 116ms (Views: 101.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/events.css?body=1" for ::1 at 2015-06-03 22:21:50 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-06-03 22:21:50 -0400
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-06-03 22:21:50 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2015-06-03 22:21:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-06-03 22:21:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2015-06-03 22:21:51 -0400
+
+
+Started GET "/assets/events.js?body=1" for ::1 at 2015-06-03 22:21:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-06-03 22:21:51 -0400
+
+
+Started GET "/login" for ::1 at 2015-06-03 22:21:55 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 59ms (Views: 57.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2015-06-03 22:22:00 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JUzu3qZFn1dALnZS1+lnv1WR/NzU/2sRp8kI6ly2PjAkt1LOLLuNLMQm4++tvu1abZiV4rMv6KDYZrrPuxsW+Q==", "name"=>"venture", "password"=>"[FILTERED]", "commit"=>"Leggo!"}
+  Maker Load (0.2ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."name" = ? LIMIT 1  [["name", "venture"]]
+Redirected to http://localhost:3000/events
+Completed 302 Found in 108ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/events" for ::1 at 2015-06-03 22:22:00 -0400
+Processing by EventsController#index as HTML
+  Maker Load (0.2ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  Event Load (0.2ms)  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 59ms (Views: 52.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/events.css?body=1" for ::1 at 2015-06-03 22:22:01 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-06-03 22:22:01 -0400
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-06-03 22:22:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2015-06-03 22:22:01 -0400
+
+
+Started GET "/assets/events.js?body=1" for ::1 at 2015-06-03 22:22:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-06-03 22:22:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2015-06-03 22:22:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-06-03 22:22:01 -0400
+
+
+Started GET "/events/new" for ::1 at 2015-06-03 22:22:02 -0400
+Processing by EventsController#new as HTML
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_form.html.erb (24.7ms)
+  Category Load (0.2ms)  SELECT "categories".* FROM "categories"
+  Location Load (0.2ms)  SELECT "locations".* FROM "locations"
+  Maker Load (0.1ms)  SELECT "makers".* FROM "makers"
+  Rendered events/new.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 103ms (Views: 95.0ms | ActiveRecord: 1.0ms)
+^C[2015-06-03 22:22:08] INFO  going to shutdown ...
+[2015-06-03 22:22:09] INFO  WEBrick::HTTPServer#start done.
+Exiting
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rake db:seed
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rails s
+=> Booting WEBrick
+=> Rails 4.2.1 application starting in development on http://localhost:3000
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server
+[2015-06-03 22:22:22] INFO  WEBrick 1.3.1
+[2015-06-03 22:22:22] INFO  ruby 2.2.2 (2015-04-13) [x86_64-darwin14]
+[2015-06-03 22:22:22] INFO  WEBrick::HTTPServer#start: pid=2111 port=3000
+
+
+Started GET "/events/" for ::1 at 2015-06-03 22:22:28 -0400
+  ActiveRecord::SchemaMigration Load (0.1ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by EventsController#index as HTML
+  Maker Load (0.3ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  Event Load (0.2ms)  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 129ms (Views: 84.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/events.css?body=1" for ::1 at 2015-06-03 22:22:28 -0400
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-06-03 22:22:28 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-06-03 22:22:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2015-06-03 22:22:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-06-03 22:22:28 -0400
+
+
+Started GET "/assets/events.js?body=1" for ::1 at 2015-06-03 22:22:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2015-06-03 22:22:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-06-03 22:22:28 -0400
+
+
+Started GET "/events/new" for ::1 at 2015-06-03 22:22:30 -0400
+Processing by EventsController#new as HTML
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_form.html.erb (26.8ms)
+  Category Load (0.3ms)  SELECT "categories".* FROM "categories"
+  Location Load (0.2ms)  SELECT "locations".* FROM "locations"
+  Maker Load (0.1ms)  SELECT "makers".* FROM "makers"
+  Rendered events/new.html.erb within layouts/application (54.2ms)
+Completed 200 OK in 110ms (Views: 101.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/events" for ::1 at 2015-06-03 22:24:21 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G3p19qcrItY3AdHmuPTkPK8iTMQg0bVGAzHNhvYZnUAagcnmLdUwrbMJRFvCo27Zlysl+kcBNvd8nn+jEbS1iQ==", "event"=>{"name"=>"grand opening", "category_id"=>"3", "location_id"=>"7", "description"=>"Join our grandiose ceremony and we reenact the falling of Caesar", "maker_id"=>"1"}, "commit"=>"Create Event"}
+  Maker Load (0.2ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameters: category_id, location_id
+   (0.1ms)  begin transaction
+   (0.1ms)  rollback transaction
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+NoMethodError (undefined method `category' for #<Event:0x007fac33f008c0>):
+  app/controllers/events_controller.rb:36:in `block in create'
+  app/controllers/events_controller.rb:35:in `create'
+
+
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (97.8ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (80.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (180.8ms)
+
+
+Started POST "/console/repl_sessions/c7f63a12ee7c41802a2dc43e6111ae22/trace" for ::1 at 2015-06-03 22:32:54 -0400
+
+
+Started POST "/console/repl_sessions/c7f63a12ee7c41802a2dc43e6111ae22/trace" for ::1 at 2015-06-03 22:32:56 -0400
+
+
+Started POST "/console/repl_sessions/c7f63a12ee7c41802a2dc43e6111ae22/trace" for ::1 at 2015-06-03 22:32:57 -0400
+
+
+Started POST "/console/repl_sessions/c7f63a12ee7c41802a2dc43e6111ae22/trace" for ::1 at 2015-06-03 22:33:01 -0400
+
+
+Started POST "/console/repl_sessions/c7f63a12ee7c41802a2dc43e6111ae22/trace" for ::1 at 2015-06-03 22:33:05 -0400
+
+
+Started POST "/console/repl_sessions/c7f63a12ee7c41802a2dc43e6111ae22/trace" for ::1 at 2015-06-03 22:33:06 -0400
+
+
+Started POST "/console/repl_sessions/c7f63a12ee7c41802a2dc43e6111ae22/trace" for ::1 at 2015-06-03 22:33:07 -0400
+
+
+Started POST "/console/repl_sessions/c7f63a12ee7c41802a2dc43e6111ae22/trace" for ::1 at 2015-06-03 22:33:08 -0400
+
+
+Started POST "/console/repl_sessions/c7f63a12ee7c41802a2dc43e6111ae22/trace" for ::1 at 2015-06-03 22:37:30 -0400
+^C[2015-06-03 22:43:51] INFO  going to shutdown ...
+[2015-06-03 22:43:51] INFO  WEBrick::HTTPServer#start done.
+Exiting
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rails s
+=> Booting WEBrick
+=> Rails 4.2.1 application starting in development on http://localhost:3000
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server
+[2015-06-03 22:43:55] INFO  WEBrick 1.3.1
+[2015-06-03 22:43:55] INFO  ruby 2.2.2 (2015-04-13) [x86_64-darwin14]
+[2015-06-03 22:43:55] INFO  WEBrick::HTTPServer#start: pid=2298 port=3000
+
+
+Started POST "/events" for ::1 at 2015-06-03 22:44:06 -0400
+  ActiveRecord::SchemaMigration Load (0.2ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M0S8iA5LEkK8uPZD4UL5mK09ANo1x9uzwUkQ4noh2IYyvwCYhLUAOTiwY/6bFXN9lTRp5FIXWAK+5qLHnYzwTw==", "event"=>{"name"=>"grand opening", "category_id"=>"3", "location_id"=>"7", "description"=>"Join our grandiose ceremony and we reenact the falling of Caesar", "maker_id"=>"1"}, "commit"=>"Create Event"}
+  Maker Load (0.2ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameters: category_id, location_id
+   (0.1ms)  begin transaction
+   (0.2ms)  rollback transaction
+  Rendered events/_form.html.erb (13.9ms)
+  Category Load (0.3ms)  SELECT "categories".* FROM "categories"
+  Location Load (0.2ms)  SELECT "locations".* FROM "locations"
+  Maker Load (0.2ms)  SELECT "makers".* FROM "makers"
+  Rendered events/new.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 167ms (Views: 116.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-06-03 22:44:06 -0400
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-06-03 22:44:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2015-06-03 22:44:06 -0400
+
+
+Started GET "/assets/events.js?body=1" for ::1 at 2015-06-03 22:44:06 -0400
+
+
+Started GET "/assets/events.css?body=1" for ::1 at 2015-06-03 22:44:06 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-06-03 22:44:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2015-06-03 22:44:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-06-03 22:44:06 -0400
+
+
+Started POST "/events" for ::1 at 2015-06-03 22:44:16 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ym8Hx1bW2n4SqdRE8BESBKSKsB09QKkCEuGQWTF3yy/LlLvX3CjIBZahQfmKRpjhnIPZI1qQKrNtTiJ81trj5g==", "event"=>{"name"=>"grand opening", "category_id"=>"3", "location_id"=>"7", "description"=>"Join our grandiose ceremony and we reenact the falling of Caesar", "maker_id"=>"1"}, "commit"=>"Create Event"}
+  Maker Load (0.2ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameters: category_id, location_id
+   (0.1ms)  begin transaction
+   (0.1ms)  rollback transaction
+  Rendered events/_form.html.erb (4.8ms)
+  Category Load (0.2ms)  SELECT "categories".* FROM "categories"
+  Location Load (0.2ms)  SELECT "locations".* FROM "locations"
+  Maker Load (0.1ms)  SELECT "makers".* FROM "makers"
+  Rendered events/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 67ms (Views: 60.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-06-03 22:44:16 -0400
+
+
+Started GET "/assets/events.css?body=1" for ::1 at 2015-06-03 22:44:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2015-06-03 22:44:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2015-06-03 22:44:16 -0400
+
+
+Started GET "/assets/events.js?body=1" for ::1 at 2015-06-03 22:44:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-06-03 22:44:16 -0400
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-06-03 22:44:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-06-03 22:44:16 -0400
+^C[2015-06-03 22:44:30] INFO  going to shutdown ...
+[2015-06-03 22:44:30] INFO  WEBrick::HTTPServer#start done.
+Exiting
+Prashawns-MacBook-Air:venture EuphoriaComplex$ rails s
+=> Booting WEBrick
+=> Rails 4.2.1 application starting in development on http://localhost:3000
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server
+[2015-06-03 22:44:34] INFO  WEBrick 1.3.1
+[2015-06-03 22:44:34] INFO  ruby 2.2.2 (2015-04-13) [x86_64-darwin14]
+[2015-06-03 22:44:34] INFO  WEBrick::HTTPServer#start: pid=2322 port=3000
+
+
+Started GET "/" for ::1 at 2015-06-03 22:44:38 -0400
+  ActiveRecord::SchemaMigration Load (0.1ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (1.5ms)
+  Maker Load (0.2ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 111ms (Views: 97.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/events.css?body=1" for ::1 at 2015-06-03 22:44:39 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-06-03 22:44:39 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-06-03 22:44:39 -0400
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-06-03 22:44:39 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2015-06-03 22:44:39 -0400
+
+
+Started GET "/assets/events.js?body=1" for ::1 at 2015-06-03 22:44:39 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2015-06-03 22:44:39 -0400
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-06-03 22:44:39 -0400
+
+
+Started GET "/login" for ::1 at 2015-06-03 22:44:41 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 60ms (Views: 58.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2015-06-03 22:44:44 -0400
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.6ms)
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 50ms (Views: 48.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2015-06-03 22:44:46 -0400
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.5ms)
+  Maker Load (0.2ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2015-06-03 22:45:17 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q4gk41Aruq8bDTYY04P2CUMG419B7kTHsVsplLu0Ip6qc5jz2tWo1J8Fo6Wp1Hzsew+KYSY+x3bO9JuxXBkKVw==", "name"=>"venture", "password"=>"[FILTERED]", "commit"=>"Leggo!"}
+  Maker Load (0.3ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."name" = ? LIMIT 1  [["name", "venture"]]
+Redirected to http://localhost:3000/events
+Completed 302 Found in 92ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for ::1 at 2015-06-03 22:45:17 -0400
+Processing by EventsController#index as HTML
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  Event Load (0.2ms)  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 57ms (Views: 51.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/events.css?body=1" for ::1 at 2015-06-03 22:45:17 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-06-03 22:45:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2015-06-03 22:45:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-06-03 22:45:17 -0400
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-06-03 22:45:17 -0400
+
+
+Started GET "/assets/events.js?body=1" for ::1 at 2015-06-03 22:45:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-06-03 22:45:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2015-06-03 22:45:17 -0400
+
+
+Started GET "/events/new" for ::1 at 2015-06-03 22:45:19 -0400
+Processing by EventsController#new as HTML
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/_form.html.erb (22.9ms)
+  Category Load (0.4ms)  SELECT "categories".* FROM "categories"
+  Location Load (0.2ms)  SELECT "locations".* FROM "locations"
+  Maker Load (0.2ms)  SELECT "makers".* FROM "makers"
+  Rendered events/new.html.erb within layouts/application (56.9ms)
+Completed 200 OK in 120ms (Views: 111.1ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/events" for ::1 at 2015-06-03 22:45:36 -0400
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HI8n5cIt+utEkQ8zuYhm2G2V2UZxotfc67rWtEBa2tgddJv1SNPokMCZmo7D3+w9VZyweBZyVG2UFWSRp/fyEQ==", "event"=>{"name"=>"grand opening", "category_id"=>"3", "location_id"=>"7", "description"=>"Join our grandiose ceremony and we reenact the falling of Caesar", "maker_id"=>"1"}, "commit"=>"Create Event"}
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameters: category_id, location_id
+   (0.1ms)  begin transaction
+  SQL (0.6ms)  INSERT INTO "events" ("name", "description", "maker_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "grand opening"], ["description", "Join our grandiose ceremony and we reenact the falling of Caesar"], ["maker_id", "1"], ["created_at", "2015-06-04 02:45:36.096273"], ["updated_at", "2015-06-04 02:45:36.096273"]]
+   (0.7ms)  commit transaction
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/events/1" for ::1 at 2015-06-03 22:45:36 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Event Load (0.2ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  CACHE (0.0ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered events/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `category' for #<Event:0x007ff576323d90>):
+     7: 
+     8: <p>
+     9:   <strong>Category:</strong>
+    10:   <%= @event.category %>
+    11: </p>
+    12: 
+    13: <p>
+  app/views/events/show.html.erb:10:in `_app_views_events_show_html_erb___3801070459377793728_70346113355220'
+
+
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (92.0ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (77.7ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (172.1ms)
+
+
+Started GET "/events/1" for ::1 at 2015-06-03 22:46:25 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Event Load (0.1ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  CACHE (0.0ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered events/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events.css?body=1" for ::1 at 2015-06-03 22:46:25 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2015-06-03 22:46:25 -0400
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-06-03 22:46:25 -0400
+
+
+Started GET "/assets/events.js?body=1" for ::1 at 2015-06-03 22:46:25 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-06-03 22:46:25 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-06-03 22:46:25 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2015-06-03 22:46:25 -0400
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-06-03 22:46:25 -0400
+
+
+Started GET "/events/1" for ::1 at 2015-06-03 22:46:41 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Event Load (0.1ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  CACHE (0.0ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered events/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-06-03 22:46:41 -0400
+
+
+Started GET "/assets/events.css?body=1" for ::1 at 2015-06-03 22:46:41 -0400
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-06-03 22:46:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-06-03 22:46:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2015-06-03 22:46:42 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2015-06-03 22:46:42 -0400
+
+
+Started GET "/assets/events.js?body=1" for ::1 at 2015-06-03 22:46:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-06-03 22:46:42 -0400
+
+
+Started GET "/events" for ::1 at 2015-06-03 22:46:44 -0400
+Processing by EventsController#index as HTML
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  Event Load (0.2ms)  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (4.8ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `category' for #<Event:0x007ff575a79938>):
+    17:     <% @events.each do |event| %>
+    18:       <tr>
+    19:         <td><%= event.name %></td>
+    20:         <td><%= event.category %></td>
+    21:         <td><%= event.description %></td>
+    22:         <td><%= event.maker_id %></td>
+    23:         <td><%= event.maker.name %></td>
+  app/views/events/index.html.erb:20:in `block in _app_views_events_index_html_erb__558187124147816952_70346112495200'
+  app/views/events/index.html.erb:17:in `_app_views_events_index_html_erb__558187124147816952_70346112495200'
+
+
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (72.1ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (169.3ms)
+
+
+Started GET "/events" for ::1 at 2015-06-03 22:46:44 -0400
+Processing by EventsController#index as HTML
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  Event Load (0.2ms)  SELECT "events".* FROM "events"
+  Rendered events/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `category' for #<Event:0x007ff5759ab498>):
+    17:     <% @events.each do |event| %>
+    18:       <tr>
+    19:         <td><%= event.name %></td>
+    20:         <td><%= event.category %></td>
+    21:         <td><%= event.description %></td>
+    22:         <td><%= event.maker_id %></td>
+    23:         <td><%= event.maker.name %></td>
+  app/views/events/index.html.erb:20:in `block in _app_views_events_index_html_erb__558187124147816952_70346087564660'
+  app/views/events/index.html.erb:17:in `_app_views_events_index_html_erb__558187124147816952_70346087564660'
+
+
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (93.6ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (74.7ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/EuphoriaComplex/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (170.1ms)
+
+
+Started GET "/events" for ::1 at 2015-06-03 22:47:54 -0400
+Processing by EventsController#index as HTML
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  Event Load (0.2ms)  SELECT "events".* FROM "events"
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/events.css?body=1" for ::1 at 2015-06-03 22:47:54 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-06-03 22:47:54 -0400
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-06-03 22:47:54 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2015-06-03 22:47:54 -0400
+
+
+Started GET "/assets/events.js?body=1" for ::1 at 2015-06-03 22:47:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-06-03 22:47:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2015-06-03 22:47:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-06-03 22:47:54 -0400
+
+
+Started GET "/events/1" for ::1 at 2015-06-03 22:48:11 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Event Load (0.1ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  CACHE (0.0ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered events/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/edit" for ::1 at 2015-06-03 22:48:13 -0400
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Event Load (0.1ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  CACHE (0.0ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered events/_form.html.erb (3.0ms)
+  Category Load (0.2ms)  SELECT "categories".* FROM "categories"
+  Location Load (0.2ms)  SELECT "locations".* FROM "locations"
+  Maker Load (0.2ms)  SELECT "makers".* FROM "makers"
+  Rendered events/edit.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 64ms (Views: 61.9ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/events/1" for ::1 at 2015-06-03 22:48:18 -0400
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MJGZFEjH6UpSdCLudQm8MtAV0dIN3AUgHVUxYJ9vN4gxaiUEwjn7MdZ8t1MPXjbX6By47GoMhpFi+oNFeMIfQQ==", "event"=>{"name"=>"grand opening", "category_id"=>"3", "location_id"=>"7", "description"=>"Join our grandiose ceremony and we reenact the falling of Caesar", "maker_id"=>"1"}, "commit"=>"Create Event", "id"=>"1"}
+  Event Load (0.1ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  CACHE (0.0ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+Unpermitted parameters: category_id, location_id
+   (0.1ms)  begin transaction
+   (0.1ms)  commit transaction
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1" for ::1 at 2015-06-03 22:48:18 -0400
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Event Load (0.3ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  CACHE (0.0ms)  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered events/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 57ms (Views: 54.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/events.css?body=1" for ::1 at 2015-06-03 22:48:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2015-06-03 22:48:19 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for ::1 at 2015-06-03 22:48:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2015-06-03 22:48:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2015-06-03 22:48:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2015-06-03 22:48:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2015-06-03 22:48:19 -0400
+
+
+Started GET "/assets/events.js?body=1" for ::1 at 2015-06-03 22:48:19 -0400
+
+
+Started GET "/events" for ::1 at 2015-06-03 22:48:20 -0400
+Processing by EventsController#index as HTML
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  Event Load (0.2ms)  SELECT "events".* FROM "events"
+  Maker Load (0.1ms)  SELECT  "makers".* FROM "makers" WHERE "makers"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.4ms)
+^C[2015-06-03 22:49:29] INFO  going to shutdown ...
+[2015-06-03 22:49:29] INFO  WEBrick::HTTPServer#start done.
+Exiting
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git add -A
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git commit -m "Fixed the WEIRD typo in db:seed; got to show events, but now category and location IDs aren't in show/index...are they even saved to Event? @event.category_id?"
+[master (root-commit) 52d99de] Fixed the WEIRD typo in db:seed; got to show events, but now category and location IDs aren't in show/index...are they even saved to Event? @event.category_id?
+ Committer: pjc191 <EuphoriaComplex@192.168.1.9>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 100 files changed, 1695 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 Gemfile
+ create mode 100644 Gemfile.lock
+ create mode 100644 README.rdoc
+ create mode 100644 Rakefile
+ create mode 100644 app/assets/images/.keep
+ create mode 100644 app/assets/javascripts/application.js
+ create mode 100644 app/assets/javascripts/events.js.coffee
+ create mode 100644 app/assets/stylesheets/application.css
+ create mode 100644 app/assets/stylesheets/events.css.scss
+ create mode 100644 app/assets/stylesheets/scaffolds.css.scss
+ create mode 100644 app/controllers/application_controller.rb
+ create mode 100644 app/controllers/concerns/.keep
+ create mode 100644 app/controllers/events_controller.rb
+ create mode 100644 app/controllers/makers_controller.rb
+ create mode 100644 app/controllers/pages_controller.rb
+ create mode 100644 app/controllers/sessions_controller.rb
+ create mode 100644 app/helpers/application_helper.rb
+ create mode 100644 app/helpers/events_helper.rb
+ create mode 100644 app/mailers/.keep
+ create mode 100644 app/models/.keep
+ create mode 100644 app/models/category.rb
+ create mode 100644 app/models/concerns/.keep
+ create mode 100644 app/models/event.rb
+ create mode 100644 app/models/location.rb
+ create mode 100644 app/models/maker.rb
+ create mode 100644 app/views/events/_form.html.erb
+ create mode 100644 app/views/events/edit.html.erb
+ create mode 100644 app/views/events/index.html.erb
+ create mode 100644 app/views/events/index.json.jbuilder
+ create mode 100644 app/views/events/new.html.erb
+ create mode 100644 app/views/events/show.html.erb
+ create mode 100644 app/views/events/show.json.jbuilder
+ create mode 100644 app/views/layouts/application.html.erb
+ create mode 100644 app/views/makers/new.html.erb
+ create mode 100644 app/views/pages/home.html.erb
+ create mode 100644 app/views/sessions/new.html.erb
+ create mode 100755 bin/bundle
+ create mode 100755 bin/rails
+ create mode 100755 bin/rake
+ create mode 100755 bin/spring
+ create mode 100644 config.ru
+ create mode 100644 config/application.rb
+ create mode 100644 config/boot.rb
+ create mode 100644 config/database.yml
+ create mode 100644 config/environment.rb
+ create mode 100644 config/environments/development.rb
+ create mode 100644 config/environments/production.rb
+ create mode 100644 config/environments/test.rb
+ create mode 100644 config/initializers/assets.rb
+ create mode 100644 config/initializers/backtrace_silencers.rb
+ create mode 100644 config/initializers/cookies_serializer.rb
+ create mode 100644 config/initializers/filter_parameter_logging.rb
+ create mode 100644 config/initializers/inflections.rb
+ create mode 100644 config/initializers/mime_types.rb
+ create mode 100644 config/initializers/session_store.rb
+ create mode 100644 config/initializers/wrap_parameters.rb
+ create mode 100644 config/locales/en.yml
+ create mode 100644 config/routes.rb
+ create mode 100644 config/secrets.yml
+ create mode 100644 db/migrate/20150523022440_create_makers.rb
+ create mode 100644 db/migrate/20150523022921_create_events.rb
+ create mode 100644 db/migrate/20150523155503_add_foreign_key_maker_id.rb
+ create mode 100644 db/migrate/20150525010758_add_password_digest_to_makers.rb
+ create mode 100644 db/migrate/20150528162139_create_categories.rb
+ create mode 100644 db/migrate/20150528162621_rename_category_column_in_events.rb
+ create mode 100644 db/migrate/20150528163356_add_foreign_key_category_id_to_events.rb
+ create mode 100644 db/migrate/20150528163745_create_locations.rb
+ create mode 100644 db/migrate/20150528163849_add_location_column_to_events.rb
+ create mode 100644 db/migrate/20150528164256_add_foreign_key_location_id_to_events.rb
+ create mode 100644 db/migrate/20150530173854_rename_column_name_type_in_categories_to_kind.rb
+ create mode 100644 db/schema.rb
+ create mode 100644 db/seeds.rb
+ create mode 100644 lib/assets/.keep
+ create mode 100644 lib/tasks/.keep
+ create mode 100644 log/.keep
+ create mode 100644 public/404.html
+ create mode 100644 public/422.html
+ create mode 100644 public/500.html
+ create mode 100644 public/favicon.ico
+ create mode 100644 public/robots.txt
+ create mode 100644 test/controllers/.keep
+ create mode 100644 test/controllers/events_controller_test.rb
+ create mode 100644 test/fixtures/.keep
+ create mode 100644 test/fixtures/categories.yml
+ create mode 100644 test/fixtures/events.yml
+ create mode 100644 test/fixtures/locations.yml
+ create mode 100644 test/fixtures/makers.yml
+ create mode 100644 test/helpers/.keep
+ create mode 100644 test/helpers/events_helper_test.rb
+ create mode 100644 test/integration/.keep
+ create mode 100644 test/mailers/.keep
+ create mode 100644 test/models/.keep
+ create mode 100644 test/models/category_test.rb
+ create mode 100644 test/models/event_test.rb
+ create mode 100644 test/models/location_test.rb
+ create mode 100644 test/models/maker_test.rb
+ create mode 100644 test/test_helper.rb
+ create mode 100644 vendor/assets/javascripts/.keep
+ create mode 100644 vendor/assets/stylesheets/.keep
+Prashawns-MacBook-Air:venture EuphoriaComplex$ ls
+Gemfile		Rakefile	config		lib		test
+Gemfile.lock	app		config.ru	log		tmp
+README.rdoc	bin		db		public		vendor
+Prashawns-MacBook-Air:venture EuphoriaComplex$ cd ..
+Prashawns-MacBook-Air:venture EuphoriaComplex$ ls
+README.md
+Terminal Saved Output 5:22
+Terminal Saved Output 5:22 2
+Terminal Saved Output 5:23 rails four point two one
+Terminal Saved Output 5:23 second fail
+Terminal Saved Output 5:23 upgrade rails 4.2 fail
+Terminal Saved Output 5:28
+venture
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git add -A
+Prashawns-MacBook-Air:venture EuphoriaComplex$ git commit -m "Fixed the WEIRD typo in db:seed; got to show events, but now category and location IDs aren't in show/index...are they even saved to Event? @event.category_id?"
+[detached HEAD 8729f13] Fixed the WEIRD typo in db:seed; got to show events, but now category and location IDs aren't in show/index...are they even saved to Event? @event.category_id?
+ Committer: pjc191 <EuphoriaComplex@192.168.1.9>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 17 insertions(+), 5 deletions(-)
+Prashawns-MacBook-Air:venture EuphoriaComplex$ 

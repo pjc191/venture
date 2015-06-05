@@ -10,12 +10,12 @@
   </div>
 
   <div class='form-group'>
-    <%= form.label :category %>
+    <%= form.label :category_id %>
     <%= form.select "category_id", options_from_collection_for_select(Category.all, "id", "kind") %>
   </div>
 
   <div class='form-group'>
-    <%= form.label :location %>
+    <%= form.label :location_id %>
     <%= form.select "location_id", options_from_collection_for_select(Location.all, "id", "area") %>
   </div>
 
