@@ -6,7 +6,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = @current_user.events
   end
 
   # GET /events/1
@@ -24,7 +24,7 @@ class EventsController < ApplicationController
 
   # GET /events/1/edit
   def edit
-    @car = Event.find_by_id(params[:id])
+    @event = Event.find_by_id(params[:id])
   end
 
   # POST /events
@@ -61,13 +61,13 @@ class EventsController < ApplicationController
 
   # DELETE /events/1
   # DELETE /events/1.json
-  #def destroy
-   # @event.destroy
-    #respond_to do |format|
-     # format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
-      #format.json { head :no_content }
-    #end
-  #end
+  def destroy
+    @event.destroy
+    respond_to do |format|
+      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

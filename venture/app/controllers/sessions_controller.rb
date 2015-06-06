@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
 	#Check password and, if good, log them in
 	def create
-		@maker = Maker.find_by_name(params[:name])
+		@maker = Maker.find_by_name(params[:name].downcase)
 
 		if @maker && @maker.authenticate(params[:password])
 			session[:maker_id] = @maker.id
